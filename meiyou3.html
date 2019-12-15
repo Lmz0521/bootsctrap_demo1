@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>meiyou3</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="css/meiyou.css">
+</head>
+<body>
+    <div class="container-fluid">
+
+    <div>
+        <img src="meiyou3/1.jpg" alt="">
+        <img src="meiyou3/2.gif" alt="">
+    </div>
+
+    <!-- 表单 -->
+    <div class="row bgO">
+              
+                <div class="col-xs-12">
+                  <div class="from_top">
+                        <h1 class="title">月嫂在线预约</h1>
+                        <p class="subhead">免费获取专业报价及咨询服务</p>
+                  </div>
+                </div>
+                <div class="from_bottom row container-fluid">
+                  <div class="col-xs-12">
+                    <div class="input-group mar5">
+                      <span class="input-group-addon ">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                      <input type="text" class="form-control " id="name" placeholder="请输入您的姓名" >              
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="input-group mar5">
+                      <span class="input-group-addon ">电&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                      <input type="text" class="form-control " id="phone" placeholder="请输入您的电话" >              
+                    </div>
+                </div>                 
+                  
+                    <div class="col-xs-12">
+                    <div class="input-group mar5">
+                      <span class="input-group-addon" >城&nbsp;&nbsp;&nbsp;&nbsp;市：</span>
+                      <select id="city" class="form-control" >
+                      <option value="" selected="">请选择您的城市</option>
+                      <option value="北京">北京</option>
+                      <option value="太原">太原</option>
+                      <option value="西安">西安</option>
+                      <option value="郑州">郑州</option>
+                      <option value="石家庄">石家庄</option>
+                      <option value="长春">长春</option>
+                      <option value="其他">其他</option>  
+                      </select>  
+                    </div>
+                </div>
+                    <div class="col-xs-12">             
+                 
+                    <div class="input-group  mar5" id="datetimepicker">
+                      <span class="input-group-addon ">预产期：</span>
+                       <input type="text" class="form-control " id="onDate" placeholder="请点击选择您的预产期">
+                    </div>      
+                </div>     
+                  <div class="col-xs-12 ">
+                    <button class="btn btn-default checke " type="button" id="btn" onclick="seek();">获取报价</button>
+                  </div>                           
+                </div>
+              
+           
+    </div>
+
+    <div>
+        <img src="meiyou3/3.jpg" alt="">
+        <img src="meiyou3/4.jpg" alt="">
+        <img src="meiyou3/2.gif" alt="">
+    </div>
+   
+    <!-- 表单 -->
+    <div class="row bgO">
+              
+            <div class="col-xs-12">
+              <div class="from_top">
+                    <h1 class="title">月嫂在线预约</h1>
+                    <p class="subhead">免费获取专业报价及咨询服务</p>
+              </div>
+            </div>
+            <div class="from_bottom row container-fluid">
+              <div class="col-xs-12">
+                <div class="input-group mar5">
+                  <span class="input-group-addon ">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                  <input type="text" class="form-control " id="name" placeholder="请输入您的姓名" >              
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <div class="input-group mar5">
+                  <span class="input-group-addon ">电&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                  <input type="text" class="form-control " id="phone" placeholder="请输入您的电话" >              
+                </div>
+            </div>                 
+              
+                <div class="col-xs-12">
+                <div class="input-group mar5">
+                  <span class="input-group-addon" >城&nbsp;&nbsp;&nbsp;&nbsp;市：</span>
+                  <select id="city" class="form-control" >
+                  <option value="" selected="">请选择您的城市</option>
+                  <option value="北京">北京</option>
+                  <option value="太原">太原</option>
+                  <option value="西安">西安</option>
+                  <option value="郑州">郑州</option>
+                  <option value="石家庄">石家庄</option>
+                  <option value="长春">长春</option>
+                  <option value="其他">其他</option>  
+                  </select>  
+                </div>
+            </div>
+                <div class="col-xs-12">             
+             
+                <div class="input-group  mar5" id="datetimepicker">
+                  <span class="input-group-addon ">预产期：</span>
+                   <input type="text" class="form-control " id="onDate" placeholder="请点击选择您的预产期">
+                </div>      
+            </div>     
+              <div class="col-xs-12 ">
+                <button class="btn btn-default checke " type="button" id="btn" onclick="seek();">获取报价</button>
+              </div>                           
+            </div>
+          
+       
+    </div>
+
+    <div class="marB70"></div>
+    
+    <!-- footer -->
+    <footer class="row container-fluid">
+            <div class="col-xl-2"></div>
+        <div class="col-xs-2">
+         <a href="tel:4000512727">
+              <span><img src="meiyou3/phone.png " ></span>
+             <p>电话咨询</p>
+        </a>
+        </div>
+        <div class="col-xs-8">
+            <div > 
+                <button type="button" class="btn"  >去挑选月嫂</button> 
+            </div>
+        </div>           
+    </footer>  
+    <img id="wx" onclick="showWx()"  src="meiyou3/wx.png">
+    <div class="modal fade bs-example-modal-lg modal-dialog-centered" id="wxMessage" >
+      <div class="modal-dialog modal-lg" >
+          <div class="modal-content">
+              <div class="wxBox">
+                  <h1 >微信答疑</h1>
+                  <p>添加<span>母婴顾问王老师微信：</span></p>
+                  <p>18518174227（长按复制）</p>
+                  <p>随时为您解答任何疑问！</p>
+                  <p>更有育儿知识定期分享哦！</p>
+                  <button ><span onclick="closeWx()" >知道了</span></button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    </div>
+
+    
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min3.3.7.js"></script>
+<script src="js/bootstrap-datetimepicker.js"></script>
+<script src="js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+
+        
+<script type="text/javascript">
+	//初始化标签，配置日期格式插件相关参数
+	$(function() {
+			$("#onDate").datetimepicker({
+				format : 'yyyy-mm-dd',
+				minView : 'month',
+				language : 'zh-CN',
+				autoclose : true,//选中自动关闭
+				startDate : '1900-01-01',
+				todayBtn : true //显示今日按钮
+			});
+        });
+        
+    function seek() {
+        let name = $('#name').val(),
+            phone = $('#phone').val(),
+            city = $('#city').val(),
+            onDate = $('#onDate').val();
+    
+        if (name == '')alert('姓名不能为空');
+        if (phone=='')alert('手机号码不能为空');				
+        if (!mobilephoneValid('sjhm1'))
+        {return false;}	
+        if (city == '')alert('城市不能为空');		
+        if (onDate == '')alert('预产期不能为空');
+        
+    }
+
+    function showWx() {
+        $('#wxMessage').modal('show');
+    }
+    function closeWx(){
+        $('#wxMessage').modal('hide');
+    }
+
+</script>
+
+
+
+
+   
+
+</body>
+</html>
